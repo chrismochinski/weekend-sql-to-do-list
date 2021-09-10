@@ -1,0 +1,17 @@
+h1 {
+    text-align: center;
+    color: #0017E6;
+}
+
+table.center {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.buttonsAndInputs {
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
