@@ -15,22 +15,26 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 [x] - build database with sample data (SQL/Postico)
 [x] - index.html - build table - headers, body, IDs, INPUTS, submit button
 [x] - build server.js (minimal - port, static, etc etc)
-[] - build router.???.js (all info? Mult routers?)
+[x] - build router.???.js (all info? Mult routers?)
 
-[] - GET ajax route (client)
-[] - GET server route (router.???.js)
+[x] - GET ajax route (client)
+[x] - GET server route (router.???.js)
 
-[] - POST ajax route (client)
-[] - POST server route (router.???.js)
+[x] - POST ajax route (client)
+[x] - POST server route (router.???.js)
 
-[] - append to DOM function (client.js)
+[x] - append to DOM function (client.js)
 
-[] - DELETE ajax route (client)
-[] - DELETE server route (router.???.js)
-[] - DELETE route add button/test in postico
+[x] - DELETE ajax route (client)
+[x] - DELETE server route (router.???.js)
+[x] - DELETE route add button/test in postico
 
-[] - PUT ajax route (client)
-[] - PUT server route (router.???.js)
-[] - PUT route add button/test in postico
+[x] - PUT ajax route (client)
+[x] - PUT server route (router.???.js)
+[x] - PUT route add button/test in postico
 
 [] - FAVICON!
+
+[] - styling galore
+
+[] - Super duper kick-butt readme

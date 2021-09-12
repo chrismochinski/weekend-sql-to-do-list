@@ -15,8 +15,19 @@
 <body>
     <h1>To-Do List</h1>
     <div class="buttonsAndInputs">
-        <input id="toDoListTitle" placeholder="Task" type="text" />
-        <input id="toDoListTitle" placeholder="Details" type="text" />
+        <input id="taskInput" placeholder="Task" type="text" />
+        <input id="descriptionInput" placeholder="Details" type="text" />
+
+        <select id="prioritySelector">
+            <option style="display:none">Priority</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="Urgent">Urgent</option>
+         </select>
+
+       
+
+        <button id="submitButton" class="center">Submit Task</button>
     </div>
     <br />
     <table class="center">
@@ -24,6 +35,7 @@
             <tr>
                 <th>Title</th>
                 <th>Description</th>
+                <th>Priority</th>
                 <th>Completed?</th>
             </tr>
         </thead>

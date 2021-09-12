@@ -9,9 +9,36 @@ table.center {
     margin-right: auto;
 }
 
+td.center {
+    text-align: center;
+}
+
 .buttonsAndInputs {
     text-align: center;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+}
+
+th, tr, td {
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.priorityUrgent {
+    background-color: rgb(255, 133, 133);
+}
+
+.priorityMedium {
+    background-color: rgb(255, 255, 133);
+}
+
+.priorityLow {
+    background-color: rgb(129, 255, 129);
+}
+
+.completedTask {
+    background-color: rgb(156, 156, 156);
+    color: rgb(97, 97, 97);
 }
