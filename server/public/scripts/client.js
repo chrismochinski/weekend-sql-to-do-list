@@ -143,9 +143,9 @@ function printListToDom(list) {
         <tr class=${listItem.isItDone ? 'completedTask' : ''}>
             <td><b>${listItem.task}</b></td>
             <td>${listItem.description}</td> 
-            <td id="priority-${listItem.id}" class=${priorityClass}>${listItem.priority}</td>
-            <td>${completed}</td>   
-            <td><button data-id="${listItem.id}" class="deleteButton">Delete</button></td>
+            <td id="priority" class=${priorityClass}>${listItem.priority}</td>
+            <td class="buttonColumn">${completed}</td>   
+            <td class="buttonColumn"><button data-id="${listItem.id}" class="deleteButton">Delete</button></td>
         </tr>
         `);
     };

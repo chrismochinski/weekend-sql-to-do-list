@@ -1,15 +1,20 @@
-h1 {
-    text-align: center;
-    color: #0017E6;
-    font-family: 'Antic Slab', serif;
-    background-image: url("/styles/images/toDoLogo.png");
+
+header {
+    background-color: #F0ED86;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .headingImage {
-    max-width: 40%;
+    max-width: 30%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+th {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 25px;
     opacity: 70%;
 }
 
@@ -17,11 +22,14 @@ table.center {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+    border-collapse: collapse;
 }
 
-tbody {
+
+tbody, tr, td {
     font-family: 'Shadows Into Light', cursive;
     font-size: 17px; 
+    border-bottom: 1px solid black;`
 }
 
 td.center {
@@ -29,17 +37,18 @@ td.center {
 }
 
 .buttonsAndInputs {
+    margin-top: 15px;
     text-align: center;
-    width: 50%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
 
-tr, td {
-    border-color: black;
-    border-width: 1px;
-    border-style: solid;
+#priority {
+    text-align: center;
 }
+
+
 
 .priorityUrgent {
     background-color:#F0777D;
@@ -60,16 +69,26 @@ tr, td {
 }
 
 button {
-    font-family: 'Antic Slab', serif;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 5px;
 }
 
 input {
     border-top: 0;
     border-left: 0;
     border-right: 0;
+    outline-color: white;
+}
+
+input::placeholder {
+    opacity: 60%;
 }
 
 select {
     font-size: 16px;
-    font-family: 'Antic Slab', serif;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.buttonColumn {
+    text-align: center;
 }
