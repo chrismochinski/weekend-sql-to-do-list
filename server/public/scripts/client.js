@@ -19,7 +19,7 @@ function handleSubmit() {
     let todo = {};
     todo.task = $('#taskInput').val();
     todo.description = $('#descriptionInput').val();
-    todo.priority = $('#prioritySelector option:selected').val(); 
+    todo.priority = $('#prioritySelector option:selected').val();
 
     //conditional - no blank inputs allowed! :)
     if ('' == todo.task) {
@@ -90,26 +90,20 @@ function deleteTask() {
 
 // client-side PUT - mark task complete
 function markComplete() {
-    let currentRow = $(this).parent().parent();
     const taskID = $(this).data('id');
     console.log(taskID);
     $.ajax({
         method: 'PUT',
         url: `/todo/${taskID}`,
-    }).then(function(response) {
+    }).then(function (response) {
         console.log('Task marked as completed!');
-        completeColorChange(currentRow);
         refreshList();
-    }).catch(function(error) {
+    }).catch(function (error) {
         alert('Something went wrong with the update.');
         console.log('Error in PUT, error:', error);
     });
-}; 
-
-function completeColorChange(tableRow) {
-    console.log(tableRow);
-    $(tableRow).css('background-color', 'pink');
-}
+};
+``
 
 //printing ToDo List to DOM!
 function printListToDom(list) {
@@ -119,7 +113,7 @@ function printListToDom(list) {
         let listItem = list[i];
 
         //ternary
-        let completed = listItem.isItDone ? 'Done!' : `<button data-id="${listItem.id}" class="markCompletedButton">Mark Completed</button>`;
+        let completed = listItem.isItDone ? 'Done!' : `<button data-id="${listItem.id}" class="markCompletedButton">Complete</button>`;
 
         // if(listItem.isItDone === false) {
         //     completed = `<button data-id="${listItem.id}" class="markCompletedButton">Mark Completed</button>`;
@@ -127,25 +121,22 @@ function printListToDom(list) {
         // else if(listItem.isItDone === true) {
         //     completed = 'Done!';
         // }
-        
-        // ternary operator
-        // <expression(boolean)> ? <true> : <false>;
 
-        // let rowClass = listItem.isItDone ? 'completedTask' : '';
+
         // if(true === listItem.isItDone) {
         //     rowClass = 'completedTask';
         // }
 
         let priorityClass = '';
-        if(true === listItem.isItDone) {
+        if (true === listItem.isItDone) {
             // do nothing.
-         }
-        else if('Urgent' === listItem.priority) {
+        }
+        else if ('Urgent' === listItem.priority) {
             priorityClass = 'priorityUrgent';
         } else if ('Medium' === listItem.priority) {
             priorityClass = 'priorityMedium';
         } else if ('Low' === listItem.priority) {
-            priorityClass = 'priorityLow';            
+            priorityClass = 'priorityLow';
         };
 
         $('#toDoList').append(`
