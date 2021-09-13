@@ -23,19 +23,19 @@ function handleSubmit() {
 
     //conditional - no blank inputs allowed! :)
     if ('' == todo.task) {
-        swal({title: "Please enter a task.", button: "Got it!", icon: "info"});
+        swal({ title: "Please enter a task.", button: "Got it!", icon: "info" });
         return;
     }
     if ('' == todo.description) {
-        swal({title: "Please enter a description.", button: "Got it!", icon: "info"});
+        swal({ title: "Please enter a description.", button: "Got it!", icon: "info" });
         return;
-    } 
+    }
     if ('' == todo.task && '' == todo.description) {
-        swal({title: "Please enter some info.", button: "Got it!", icon: "info"});;
+        swal({ title: "Please enter some info.", button: "Got it!", icon: "info" });;
         return;
     }
     if ('Priority' === todo.priority) {
-        swal({title: "Please select a priority level.", button: "Got it!", icon: "info"});;
+        swal({ title: "Please select a priority level.", button: "Got it!", icon: "info" });;
         return;
     }
     else {
@@ -68,10 +68,30 @@ function refreshList() {
     }).then(function (response) {
         console.log(response);
         printListToDom(response);
+        printSuccessMessage(response);
     }).catch(function (error) {
         console.log('error in GET', error);
     });
 };
+
+function printSuccessMessage(response) {
+    if (response.length === 0) {
+        $('#successMessage').css('font-size', '80px');
+        $('#successMessage').text(`You did it!`);
+    }
+    else if (response.length === 1) {
+        $('#successMessage').css('font-size', '50px');
+        $('#successMessage').text(`Almost there! Just 1 task left!`);
+    }
+    else if (response.length >= 2 && response.length < 6) {
+        $('#successMessage').css('font-size', '40px');
+        $('#successMessage').text(`Almost there! Just ${response.length} tasks to go!`);
+    }
+    else if (response.length >= 6) {
+        $('#successMessage').css('font-size', '25px');
+        $('#successMessage').text(`Let's get to work! ${response.length} Tasks to go...`);
+    }
+}
 
 //client-side DELETE - remove task from list
 function deleteTask() {
@@ -83,14 +103,14 @@ function deleteTask() {
         console.log('Task was deleted!');
         refreshList();
     }).catch(function (error) {
-        alert('Sorry - something went wrong');
+        alert('Sorry - something went wrong test');
         console.log('error in DELETE', error);
     });
 };
 
 // client-side PUT - mark task complete
 function markComplete() {
-    swal({title: "Nice Work!", text: "You completed a task", button: "Woot!", icon: "success"});
+    swal({ title: "Nice Work!", text: "You completed a task", button: "Woot!", icon: "success" });
     const taskID = $(this).data('id');
     console.log(taskID);
     $.ajax({
@@ -154,7 +174,7 @@ function printListToDom(list) {
 
 // clear inputs after use hits submit
 function clearInputs() {
-    swal({title: "Success!", text: "Task added.", button: "Woot!", icon: "success"});
+    swal({ title: "Success!", text: "Task added.", button: "Woot!", icon: "success" });
     $('#taskInput').val('');
     $('#descriptionInput').val('');
     $('#prioritySelector').val('Priority');
