@@ -23,19 +23,19 @@ function handleSubmit() {
 
     //conditional - no blank inputs allowed! :)
     if ('' == todo.task) {
-        alert('Please enter a task!');
+        alert('Please enter a task.');
         return;
     }
     if ('' == todo.description) {
-        alert('Please enter a description!');
+        alert('Please enter a description.');
         return;
     }
     if ('' == todo.task && '' == todo.description) {
-        alert('Please enter a task and a description!');
+        alert('Please enter a task and a description.');
         return;
     }
     if ('Priority' === todo.priority) {
-        alert('Please select a priority level!');
+        alert('Please select a priority level.');
         return;
     }
     else {
@@ -141,7 +141,7 @@ function printListToDom(list) {
 
         $('#toDoList').append(`
         <tr class=${listItem.isItDone ? 'completedTask' : ''}>
-            <td><b>${listItem.task}</b></td>
+            <td><b>"${listItem.task}"</b></td>
             <td>${listItem.description}</td> 
             <td id="priority" class=${priorityClass}>${listItem.priority}</td>
             <td class="buttonColumn">${completed}</td>   
