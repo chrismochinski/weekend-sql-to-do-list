@@ -13,7 +13,9 @@ The user is also able to mark a task as complete and even delete the task from t
 
 ---
 
-![gif after use](./README-visuals/toDoPreview.gif)
+![gif during use](./README-visuals/toDoPreview.gif)
+---
+![gif completing list](./README-visuals/toDoPreview2.gif)
 
 <br />
 

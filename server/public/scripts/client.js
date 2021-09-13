@@ -45,6 +45,7 @@ function handleSubmit() {
 
 //client-side POST - user adding to fields via button
 function addToList(todo) {
+    $('body').removeClass('fireworks');
     console.log(todo);
     $.ajax({
         type: 'POST',
@@ -76,6 +77,7 @@ function refreshList() {
 
 function printSuccessMessage(response) {
     if (response.length === 0) {
+        $('.container').addClass('fireworks')
         $('#successMessage').css('font-size', '80px');
         $('#successMessage').text(`You did it!`);
     }

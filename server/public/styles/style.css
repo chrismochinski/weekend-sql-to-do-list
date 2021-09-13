@@ -78,10 +78,12 @@ button {
 }
 
 input {
+    transition-duration: .4s;
     border-top: 0;
     border-left: 0;
     border-right: 0;
     outline-width: 0px;
+    background: transparent;
 }
 
 input:focus {
@@ -103,6 +105,16 @@ select {
 
 .buttonColumn {
     text-align: center;
+}
+
+.fireworks {
+    background-image: url("./images/fireworks.gif");
+    background-size: 100%;
+    background-repeat: none;
+}
+
+.container {
+    padding-bottom: 150px;
 }
 
 footer {
