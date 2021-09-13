@@ -16,7 +16,7 @@ app.use('/todo', toDoRouter);
 
 
 //end of page
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000; //process.env.PORT || 5000 ...this first part works with heroku 
 app.listen(PORT, () => {
     console.log(`quietly eavesdropping on port: ${PORT}...`);
 })
