@@ -23,19 +23,19 @@ function handleSubmit() {
 
     //conditional - no blank inputs allowed! :)
     if ('' == todo.task) {
-        alert('Please enter a task.');
+        swal({title: "Please enter a task.", button: "Got it!", icon: "info"});
         return;
     }
     if ('' == todo.description) {
-        alert('Please enter a description.');
+        swal({title: "Please enter a description.", button: "Got it!", icon: "info"});
         return;
-    }
+    } 
     if ('' == todo.task && '' == todo.description) {
-        alert('Please enter a task and a description.');
+        swal({title: "Please enter some info.", button: "Got it!", icon: "info"});;
         return;
     }
     if ('Priority' === todo.priority) {
-        alert('Please select a priority level.');
+        swal({title: "Please select a priority level.", button: "Got it!", icon: "info"});;
         return;
     }
     else {
@@ -90,6 +90,7 @@ function deleteTask() {
 
 // client-side PUT - mark task complete
 function markComplete() {
+    swal({title: "Nice Work!", text: "You completed a task", button: "Woot!"});
     const taskID = $(this).data('id');
     console.log(taskID);
     $.ajax({
@@ -153,6 +154,7 @@ function printListToDom(list) {
 
 // clear inputs after use hits submit
 function clearInputs() {
+    swal({title: "Success!", text: "Task added.", button: "Woot!", icon: "success"});
     $('#taskInput').val('');
     $('#descriptionInput').val('');
     $('#prioritySelector').val('Priority');
