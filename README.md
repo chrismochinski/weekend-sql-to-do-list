@@ -1,4 +1,4 @@
- # <p align="left"> <b>jQuery Server Calculator</b> <img src="./README-visuals/checkLogo.png" alt="green check logo" style="width:30px;"><p>
+ # <p align="left"> <b>Weekend To-Do List</b> <img src="./README-visuals/checkLogo.png" alt="green check logo" style="width:30px;"><p>
 
 ## <b><span style="color:#F0ED86">This application acts as a simple, attractive, multi-feature to-do list.</b>
 <br />
