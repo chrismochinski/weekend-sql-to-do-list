@@ -90,7 +90,7 @@ function deleteTask() {
 
 // client-side PUT - mark task complete
 function markComplete() {
-    swal({title: "Nice Work!", text: "You completed a task", button: "Woot!"});
+    swal({title: "Nice Work!", text: "You completed a task", button: "Woot!", icon: "success"});
     const taskID = $(this).data('id');
     console.log(taskID);
     $.ajax({
