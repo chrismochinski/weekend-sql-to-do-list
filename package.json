@@ -22,7 +22,7 @@
     "boostrap": "^2.0.0",
     "bootstrap": "^5.1.1",
     "express": "^4.17.1",
-    "pg": "^8.7.1"
-  },
-  "devDependencies": {}
+    "pg": "^8.7.1",
+    "sweetalert": "^2.1.2"
+  }
 }

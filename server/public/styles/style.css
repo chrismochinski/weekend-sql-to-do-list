@@ -80,6 +80,13 @@ input {
     outline-width: 0px;
 }
 
+input:focus {
+    transition-duration: .25s;
+    border-bottom-color: #F0777D;
+    border-bottom-width: 7px;
+
+}
+
 input::placeholder {
     opacity: 60%;
 }
