@@ -105,7 +105,7 @@ function deleteTask() {
         console.log('Task was deleted!');
         refreshList();
     }).catch(function (error) {
-        alert('Sorry - something went wrong test');
+        alert('Oops! Something broke!');
         console.log('error in DELETE', error);
     });
 };
