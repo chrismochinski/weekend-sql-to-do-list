@@ -28,4 +28,4 @@ VALUES
 	('Teeth', 'Whiten/Brush/Floss/Swish/apply retainer', 'Medium'), 
 	('Bedtime', 'Be in bed by 11 PM', 'Medium');
 
-    SELECT * FROM "to-do" LIMIT 50;
+    SELECT * FROM "todo" LIMIT 50;
